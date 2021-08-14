@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/wavefoogle-client/static/css/main.2dee9235.chunk.css",
+    "main.js": "/wavefoogle-client/static/js/main.1b99b9af.chunk.js",
+    "main.js.map": "/wavefoogle-client/static/js/main.1b99b9af.chunk.js.map",
+    "runtime-main.js": "/wavefoogle-client/static/js/runtime-main.e40fa8e3.js",
+    "runtime-main.js.map": "/wavefoogle-client/static/js/runtime-main.e40fa8e3.js.map",
+    "static/css/2.da1eef19.chunk.css": "/wavefoogle-client/static/css/2.da1eef19.chunk.css",
+    "static/js/2.eb4c270b.chunk.js": "/wavefoogle-client/static/js/2.eb4c270b.chunk.js",
+    "static/js/2.eb4c270b.chunk.js.map": "/wavefoogle-client/static/js/2.eb4c270b.chunk.js.map",
+    "index.html": "/wavefoogle-client/index.html",
+    "static/css/2.da1eef19.chunk.css.map": "/wavefoogle-client/static/css/2.da1eef19.chunk.css.map",
+    "static/css/main.2dee9235.chunk.css.map": "/wavefoogle-client/static/css/main.2dee9235.chunk.css.map",
+    "static/js/2.eb4c270b.chunk.js.LICENSE.txt": "/wavefoogle-client/static/js/2.eb4c270b.chunk.js.LICENSE.txt",
+    "static/media/logo.46b36e81.png": "/wavefoogle-client/static/media/logo.46b36e81.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e40fa8e3.js",
+    "static/css/2.da1eef19.chunk.css",
+    "static/js/2.eb4c270b.chunk.js",
+    "static/css/main.2dee9235.chunk.css",
+    "static/js/main.1b99b9af.chunk.js"
+  ]
+}
