@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.App {
+  background-color: #b01213;
+  text-align: center;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0; 
+  left: 0;
+}
+
+.trademark{
+  margin-top: 10px;
+  color: white;
+}
+
+.yt-icon{
+  height: 14px;
+  margin-top: -4px;
+  margin-right: 5px;
+}
+
+.logo {
+  height: 200px;
+  pointer-events: none;
+}
+
+.load-more {
+  display: block !important;
+  margin: 100px !important;
+  
+}
+
+.results {
+  margin-top: 10px;
+  color: white;
+  text-align: left;
+}
+
+.name {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-family: 'Indie Flower', cursive;
+}
+
+.name:hover{
+  color: black;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.search {
+  align-items: center;
+  padding: 5px 20px 5px 20px;
+  margin: 10px;
+  border-radius: 0.4rem;
+  border: none;
+  transition: box-shadow 300ms;
+  height: 50px;
+  width: 600px;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+.search {
+  width: 100%;
+}
+}
+
+.video-dropdown {
+  float: right;
+}
+
+.additional-info {
+  overflow: hidden;
+  margin: auto;
+  width: 600px;
+}
+
+.search:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem
+}

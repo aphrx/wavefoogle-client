@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.section {
+    margin: 20px;
+    align-items: center;
+    font-family: 'Indie Flower', cursive;
+    transition: box-shadow 300ms;
+    font-size: 18px;
+    display: inline-block;
+    width: 70%;
+  }
+
+@media only screen and (max-width: 800px) {
+    .section {
+        width: 100%;
+        overflow: visible;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .video-frame{
+        float: left;
+    }
+}
+
+.contents {
+    color: white;
+    font-size: 30px;
+    padding-top: 8%;
+    width: 100%;
+    
+}
