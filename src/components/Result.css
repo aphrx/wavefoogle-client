@@ -7,19 +7,30 @@
     transition: box-shadow 300ms;
     font-size: 18px;
     display: inline-block;
-    width: 70%;
+    width: '100vw';
   }
+
+.video-frame{
+    float: none;
+    width: '80vw';
+}
+
+
 
 @media only screen and (max-width: 800px) {
     .section {
+        margin: 0px;
         width: 100%;
-        overflow: visible;
+        overflow: hidden;
     }
 }
 
 @media only screen and (min-width: 800px) {
     .video-frame{
         float: left;
+        width: 560px;
+        height: 315px;
+        align-items: center;
     }
 }
 

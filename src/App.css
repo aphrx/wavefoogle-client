@@ -3,6 +3,7 @@
 .App {
   background-color: #b01213;
   text-align: center;
+  margin: auto;
   height: 100%;
   top: 0;
   right: 0;
@@ -33,9 +34,8 @@
 }
 
 .results {
-  margin-top: 10px;
   color: white;
-  text-align: left;
+  text-align: center;
 }
 
 .name {
@@ -53,6 +53,11 @@
   background: white !important;
   text-transform: capitalize !important;
   margin: 10px !important;
+}
+
+.header {
+  overflow: hidden;
+
 }
 
 .App-header {
@@ -79,9 +84,9 @@
 }
 
 @media only screen and (max-width: 800px) {
-.search {
-  width: 100%;
-}
+  .search {
+    width: 95vw;
+  }
 }
 
 .video-dropdown {
@@ -89,9 +94,8 @@
 }
 
 .additional-info {
-  overflow: hidden;
+  text-align: center;
   margin: auto;
-  width: 600px;
 }
 
 .search:focus {

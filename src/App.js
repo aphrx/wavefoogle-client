@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  const incrementLength = 5
+  const incrementLength = 6
   const [searchTerm, setSearchTerm] = useState(null)
   const [results, setResults] = useState([])
   const [showResults, setShowResults] = useState([])
@@ -33,7 +33,7 @@ function App() {
 
   const handleLucky = (e) => {
     e.preventDefault();
-    let url = "http://localhost:8000/api/lucky?search="
+    let url = MAIN_URL + "/api/lucky?search="
     axios.get(url + searchTerm)
     .then((response) => {
       setResults([response.data]);
@@ -52,16 +52,17 @@ function App() {
   }
 
   const variants = {
-    empty: { y: '50%' },
+    empty: { y: '20vh' },
     filled: { y: 0 }
   }
 
   return (
     <div className="App">
-      <motion.div 
-      initial={{y: 800}}
-      animate={showResults.length ? "filled" : "empty"}
-      variants={variants}>
+      <motion.div
+      className="header"
+        initial={{y: '100vh'}}
+        animate={showResults.length ? "filled" : "empty"}
+        variants={variants}>
         <img className="logo" alt="logo" src={logo}/>
         <form onSubmit={handleSubmit}>
           <input placeholder="Search" type="text" className="search" value={searchTerm} onChange={handleChange}/>
