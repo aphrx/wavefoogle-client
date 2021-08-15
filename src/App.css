@@ -49,6 +49,12 @@
   color: black;
 }
 
+.wvbtn {
+  background: white !important;
+  text-transform: capitalize !important;
+  margin: 10px !important;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

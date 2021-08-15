@@ -17,16 +17,28 @@ function App() {
   const [showResults, setShowResults] = useState([])
   const [length, setLength] = useState(incrementLength)
 
+  //const MAIN_URL = "http://localhost:8000"
+  const MAIN_URL = "https://waveform-server.herokuapp.com"
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    //let url = "http://localhost:8000/api/search?search="
-    let url = "https://waveform-server.herokuapp.com/api/search?search="
+    let url = MAIN_URL + "/api/search?search="
     axios.get(url + searchTerm)
     .then((response) => {
       setResults(response.data);
       setShowResults(response.data.slice(0, incrementLength))
     })
     setLength(2 * incrementLength)
+  }
+
+  const handleLucky = (e) => {
+    e.preventDefault();
+    let url = "http://localhost:8000/api/lucky?search="
+    axios.get(url + searchTerm)
+    .then((response) => {
+      setResults([response.data]);
+      setShowResults([response.data]);
+    })
   }
 
   const handleChange = (e) => {
@@ -53,6 +65,9 @@ function App() {
         <img className="logo" alt="logo" src={logo}/>
         <form onSubmit={handleSubmit}>
           <input placeholder="Search" type="text" className="search" value={searchTerm} onChange={handleChange}/>
+          <br />
+          <Button className="wvbtn" variant="light" onClick={handleSubmit}> Waveform Search</Button>
+          <Button className="wvbtn" variant="light" onClick={handleLucky}> I'm Feeling Lucky</Button>
         </form>
         <div className="additional-info">
           {(showResults.length !== 0)?
