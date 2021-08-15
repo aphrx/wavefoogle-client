@@ -29,8 +29,9 @@
 
 .load-more {
   display: block !important;
-  margin: 100px !important;
-  
+  margin: 50px !important;
+  background: white !important;
+  text-transform: capitalize !important;
 }
 
 .results {
