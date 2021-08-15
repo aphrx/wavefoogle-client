@@ -1,12 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
 import logo from './logo.png';
+import ytlogo from './yt-logo.png';
 import axios from 'axios';
 import Result from './components/Result';
 import Button from '@material-ui/core/Button';
 import { motion } from "framer-motion"
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,8 +19,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(searchTerm)
-    let url = "http://localhost:8000/api/search?search="
+    //let url = "http://localhost:8000/api/search?search="
+    let url = "https://waveform-server.herokuapp.com/api/search?search="
     axios.get(url + searchTerm)
     .then((response) => {
       setResults(response.data);
@@ -59,7 +58,7 @@ function App() {
           {(showResults.length !== 0)?
           <div>
             <p className="results">{results.length} results</p>
-            </div>:<p className="trademark">Made by <a className="name" href="https://www.youtube.com/aphrx"><img className="yt-icon" src="https://lh3.googleusercontent.com/proxy/QKIXhVScx0wnJpTt4j6R2q3qfB7C95FI4o1oxSROMmi1H23ZC_xt3wJ7ZpDYioIiEfdoUwegFKY8lxnucYVNBURsc76x8w0"/>Aphrx</a></p>}
+            </div>:<p className="trademark">Made by <a className="name" href="https://www.youtube.com/aphrx"><img className="yt-icon" src={ytlogo}/>Aphrx</a></p>}
           
         </div>
       </motion.div>
