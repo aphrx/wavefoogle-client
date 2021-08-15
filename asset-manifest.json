@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wavefoogle-client/static/css/main.02331e8f.chunk.css",
-    "main.js": "/wavefoogle-client/static/js/main.a747a9e1.chunk.js",
-    "main.js.map": "/wavefoogle-client/static/js/main.a747a9e1.chunk.js.map",
+    "main.js": "/wavefoogle-client/static/js/main.d7e8d6fe.chunk.js",
+    "main.js.map": "/wavefoogle-client/static/js/main.d7e8d6fe.chunk.js.map",
     "runtime-main.js": "/wavefoogle-client/static/js/runtime-main.e40fa8e3.js",
     "runtime-main.js.map": "/wavefoogle-client/static/js/runtime-main.e40fa8e3.js.map",
     "static/css/2.da1eef19.chunk.css": "/wavefoogle-client/static/css/2.da1eef19.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.da1eef19.chunk.css",
     "static/js/2.0ff6671f.chunk.js",
     "static/css/main.02331e8f.chunk.css",
-    "static/js/main.a747a9e1.chunk.js"
+    "static/js/main.d7e8d6fe.chunk.js"
   ]
 }
