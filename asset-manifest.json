@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/wavefoogle-client/static/css/main.57dc2130.chunk.css",
+    "main.css": "/wavefoogle-client/static/css/main.a0004694.chunk.css",
     "main.js": "/wavefoogle-client/static/js/main.d37cec85.chunk.js",
     "main.js.map": "/wavefoogle-client/static/js/main.d37cec85.chunk.js.map",
     "runtime-main.js": "/wavefoogle-client/static/js/runtime-main.e40fa8e3.js",
@@ -10,7 +10,7 @@
     "static/js/2.0ff6671f.chunk.js.map": "/wavefoogle-client/static/js/2.0ff6671f.chunk.js.map",
     "index.html": "/wavefoogle-client/index.html",
     "static/css/2.da1eef19.chunk.css.map": "/wavefoogle-client/static/css/2.da1eef19.chunk.css.map",
-    "static/css/main.57dc2130.chunk.css.map": "/wavefoogle-client/static/css/main.57dc2130.chunk.css.map",
+    "static/css/main.a0004694.chunk.css.map": "/wavefoogle-client/static/css/main.a0004694.chunk.css.map",
     "static/js/2.0ff6671f.chunk.js.LICENSE.txt": "/wavefoogle-client/static/js/2.0ff6671f.chunk.js.LICENSE.txt",
     "static/media/logo.81baf51c.png": "/wavefoogle-client/static/media/logo.81baf51c.png",
     "static/media/yt-logo.82371428.png": "/wavefoogle-client/static/media/yt-logo.82371428.png"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.e40fa8e3.js",
     "static/css/2.da1eef19.chunk.css",
     "static/js/2.0ff6671f.chunk.js",
-    "static/css/main.57dc2130.chunk.css",
+    "static/css/main.a0004694.chunk.css",
     "static/js/main.d37cec85.chunk.js"
   ]
 }
