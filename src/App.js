@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useState } from 'react';
 import logo from './logo.png';
 import ytlogo from './yt-logo.png';
@@ -6,7 +5,7 @@ import axios from 'axios';
 import Result from './components/Result';
 import Button from '@material-ui/core/Button';
 import { motion } from "framer-motion"
-
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -16,6 +15,7 @@ function App() {
   const [results, setResults] = useState([])
   const [showResults, setShowResults] = useState([])
   const [length, setLength] = useState(incrementLength)
+  const [searchAttempt, setSearchAttempt] = useState(false)
 
   //const MAIN_URL = "http://localhost:8000"
   const MAIN_URL = "https://waveform-server.herokuapp.com"
@@ -25,8 +25,15 @@ function App() {
     let url = MAIN_URL + "/api/search?search="
     axios.get(url + searchTerm)
     .then((response) => {
-      setResults(response.data);
-      setShowResults(response.data.slice(0, incrementLength))
+      if(response.data.length > 0){
+        setSearchAttempt(false)
+        setResults(response.data);
+        setShowResults(response.data.slice(0, incrementLength))
+      }
+      else{
+        setSearchAttempt(true)
+        setResults([])
+      }
     })
     setLength(2 * incrementLength)
   }
@@ -36,14 +43,22 @@ function App() {
     let url = MAIN_URL + "/api/lucky?search="
     axios.get(url + searchTerm)
     .then((response) => {
-      setResults([response.data]);
-      setShowResults([response.data]);
+      if(response.data){
+        setSearchAttempt(false)
+        setResults([response.data])
+        setShowResults([response.data]);
+      }
+      else {
+        setSearchAttempt(true)
+        setResults([])
+      }
     })
   }
 
   const handleChange = (e) => {
     setShowResults([]);
     setSearchTerm(e.target.value);
+    setSearchAttempt(false)
   }
 
   const loadMore = () => {
@@ -71,7 +86,7 @@ function App() {
           <Button className="wvbtn" variant="light" onClick={handleLucky}> I'm Feeling Lucky</Button>
         </form>
         <div className="additional-info">
-          {(showResults.length !== 0)?
+          {showResults.length !== 0 || searchAttempt?
           <div>
             <p className="results">{results.length} results</p>
             </div>:<p className="trademark">Made by <a className="name" href="https://www.youtube.com/aphrx"><img className="yt-icon" src={ytlogo}/>Aphrx</a></p>}
