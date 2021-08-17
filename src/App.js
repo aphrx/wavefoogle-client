@@ -4,6 +4,7 @@ import ytlogo from './yt-logo.png';
 import axios from 'axios';
 import Result from './components/Result';
 import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { motion } from "framer-motion"
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,15 +17,18 @@ function App() {
   const [showResults, setShowResults] = useState([])
   const [length, setLength] = useState(incrementLength)
   const [searchAttempt, setSearchAttempt] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   //const MAIN_URL = "http://localhost:8000"
   const MAIN_URL = "https://waveform-server.herokuapp.com"
 
   const handleSubmit = (e) => {
+    setLoading(true)
     e.preventDefault();
     let url = MAIN_URL + "/api/search?search="
     axios.get(url + searchTerm)
     .then((response) => {
+      setLoading(false);
       if(response.data.length > 0){
         setSearchAttempt(false)
         setResults(response.data);
@@ -39,10 +43,12 @@ function App() {
   }
 
   const handleLucky = (e) => {
+    setLoading(true)
     e.preventDefault();
     let url = MAIN_URL + "/api/lucky?search="
     axios.get(url + searchTerm)
     .then((response) => {
+      setLoading(false);
       if(response.data){
         setSearchAttempt(false)
         setResults([response.data])
@@ -67,7 +73,7 @@ function App() {
   }
 
   const variants = {
-    empty: { y: '20vh' },
+    empty: { y: '15vh' },
     filled: { y: 0 }
   }
 
@@ -92,6 +98,7 @@ function App() {
             </div>:<p className="trademark">Made by <a className="name" href="https://www.youtube.com/aphrx"><img className="yt-icon" src={ytlogo}/>Aphrx</a></p>}
           
         </div>
+        {loading?<CircularProgress className="loading-results" color="white"/>:null}
       </motion.div>
       
       <div align="center">

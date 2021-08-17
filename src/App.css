@@ -45,8 +45,7 @@
 .name {
   text-decoration: none;
   color: white;
-  font-weight: bold;
-  font-family: 'Indie Flower', cursive;
+
 }
 
 .name:hover{
@@ -75,6 +74,10 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.loading-results {
+  color:white;
 }
 
 .search {
